@@ -1,8 +1,7 @@
 package com.andile.houseofpizza.persistence.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -29,6 +28,7 @@ public class Order implements Serializable {
     @JoinColumn(name = "user_id", referencedColumnName = "user_id",insertable = false,updatable = false)
     private User user;
 
+    @Column(name = "total_price")
     private Double totalPrice;
 
     private LocalDateTime createdAt;

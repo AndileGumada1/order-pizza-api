@@ -1,6 +1,7 @@
 package com.andile.houseofpizza.persistence.repository;
 
 import com.andile.houseofpizza.persistence.model.AuthenticationToken;
+
 import com.andile.houseofpizza.persistence.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

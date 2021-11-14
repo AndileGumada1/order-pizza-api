@@ -1,14 +1,17 @@
 package com.andile.houseofpizza.persistence.model;
 
 import javax.persistence.*;
+
+
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "tokens")
-public class AuthenticationToken {
+public class AuthenticationToken implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+
     private Integer id;
 
     private String token;

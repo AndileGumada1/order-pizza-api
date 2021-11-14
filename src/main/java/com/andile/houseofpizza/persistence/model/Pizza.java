@@ -6,13 +6,14 @@ import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "pizzas")
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Pizza {
+public class Pizza implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +25,7 @@ public class Pizza {
     @NotNull
     private Double price;
     @NotNull
+    @Column(name = "image_url")
     private String imageUrl;
 
     @JsonIgnore

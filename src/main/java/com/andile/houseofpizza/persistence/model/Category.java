@@ -20,6 +20,7 @@ public class Category implements Serializable {
     private  String description;
 
     @NotBlank
+    @Column(name = "image_url")
     private  String imageUrl;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

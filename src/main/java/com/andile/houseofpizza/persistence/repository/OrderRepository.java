@@ -1,5 +1,6 @@
 package com.andile.houseofpizza.persistence.repository;
 
+
 import com.andile.houseofpizza.persistence.model.Order;
 import com.andile.houseofpizza.persistence.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -17,5 +18,5 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
      * @param user
      * @return List of users in the database by order
      */
-    List<Order> findAllByUserOrderByCreatedDateDesc(User user);
+    List<Order> findAllUserByOrderCreatedDateDesc(User user);
 }
