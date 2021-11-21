@@ -1,0 +1,7 @@
+package com.andile.houseofpizza.infrastructure.common.utils;
+
+public class Helper {
+    public static boolean notNull(Object obj) {
+        return obj != null;
+    }
+}

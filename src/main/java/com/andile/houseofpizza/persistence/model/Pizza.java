@@ -2,6 +2,7 @@ package com.andile.houseofpizza.persistence.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @Table(name = "pizzas")
 @AllArgsConstructor
 @RequiredArgsConstructor
+@Data
 public class Pizza implements Serializable {
 
     @Id

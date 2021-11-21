@@ -1,6 +1,7 @@
 package com.andile.houseofpizza.persistence.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "carts")
+@AllArgsConstructor
 public class Cart implements Serializable {
 
     @Id
@@ -30,4 +32,8 @@ public class Cart implements Serializable {
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
+
+    public Cart(Pizza pizza, Integer quantity, User user) {
+
+    }
 }

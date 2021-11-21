@@ -2,12 +2,19 @@ package com.andile.houseofpizza.persistence.model;
 
 import com.andile.houseofpizza.infrastructure.common.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Getter
 public class User implements Serializable {
 
     @Id
@@ -38,4 +45,16 @@ public class User implements Serializable {
     @JsonIgnore
     @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
     private List<Order> orders;
+
+    public User(String firstName, String lastName, String email, Role user, String password,String address,String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.role = user;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+
+
+    }
 }

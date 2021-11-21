@@ -14,9 +14,5 @@ import java.util.List;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    /**
-     * @param user
-     * @return List of users in the database by order
-     */
-    List<Order> findAllUserByOrderCreatedDateDesc(User user);
+
 }
